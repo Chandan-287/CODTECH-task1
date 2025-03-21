@@ -57,12 +57,6 @@ The project uses an Arduino Uno microcontroller to handle the counting logic and
    - Apply 5V power.  
    - Press the button to see the count increment on the LCD. 
 
-# Circuit Diagram
-[Circuit Diagram](circuit_diagram.jpg)
-
-# Output
-[Output Image](output.jpg)
-
 # Troubleshooting
 1. No Display on LCD:  
    - Check the contrast potentiometer settings.  
@@ -78,3 +72,6 @@ If you have any improvements or bug fixes, feel free to fork the repository and 
 
 # License
 This project is licensed under the MIT License.
+
+![circuit_diagram ](https://github.com/user-attachments/assets/4474bc4e-a0d7-4e07-bfea-95759a51fe42)
+
