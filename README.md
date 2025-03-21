@@ -1,4 +1,4 @@
-*# CODTECH-task1
+# CODTECH-task1
 
 Name : Chandan A
 
