@@ -1,0 +1,44 @@
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h> 
+// Includes libraries for I2C communication and for controlling an LCD module.
+
+const int buttonPin = 7; // Pin connected to the push button
+const int ledPin = 8;    // Pin connected to the LED
+int buttonState = 0;     // Variable to store the current state of the button (pressed or not)
+int lastButtonState = 0; // Variable to store the button's previous state
+int count = 0;           // Counter variable to track the number of button presses
+
+// Initialize the LCD with its I2C address (0x27) and dimensions (16 columns, 2 rows)
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+void setup() {
+  pinMode(buttonPin, INPUT);  // Configures the button pin as an input
+  pinMode(ledPin, OUTPUT);    // Configures the LED pin as an output
+  lcd.init();                // Initializes the LCD display
+  lcd.backlight();           // Turns on the backlight of the LCD
+  lcd.setCursor(0, 0);       // Positions the cursor at the beginning of the first line
+  lcd.print("Count: 0");     // Displays the initial message "Count: 0" on the LCD
+}
+
+void loop() {
+  buttonState = digitalRead(buttonPin); // Reads the current state of the push button
+
+  if (buttonState == HIGH && lastButtonState == LOW) {
+    // Checks if the button has been pressed (transition from LOW to HIGH)
+    delay(50); // Debouncing delay to avoid detecting false button presses
+    if (digitalRead(buttonPin) == HIGH) { 
+      // Verifies the button is still pressed after the debounce delay
+      count++; // Increments the counter by 1
+      lcd.clear(); // Clears the LCD display
+      lcd.setCursor(0, 0); // Positions the cursor at the beginning of the first line
+      lcd.print("Count: "); // Prints "Count: " on the LCD
+      lcd.print(count); // Displays the updated counter value on the LCD
+      
+      // Blink the LED as a visual indicator for each button press
+      digitalWrite(ledPin, HIGH); // Turns the LED ON
+      delay(100);                 // Keeps the LED ON for 100 milliseconds
+      digitalWrite(ledPin, LOW);  // Turns the LED OFF
+    }
+  }
+  lastButtonState = buttonState; // Updates the last button state to the current state
+}
