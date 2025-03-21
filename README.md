@@ -1,15 +1,10 @@
-# CODTECH-task 1
+# CODTECH Internship - task 1
 
 Name : Chandan A
-
-Company : CODTECH IT SOLUTIONS
-
+Company : CODTECH IT SOLUTIONS Pvt. Ltd.
 ID : CT6WTWE
-
 Domain : Embedded Systems
-
 Duration : February 20th, 2025 to April 5th, 2025
-
 Mentor : Neela Santhosh
 
 # Project Title
