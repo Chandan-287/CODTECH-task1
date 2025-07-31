@@ -73,5 +73,5 @@ If you have any improvements or bug fixes, feel free to fork the repository and 
 # License
 This project is licensed under the MIT License.
 
-![circuit_diagram ](https://github.com/user-attachments/assets/4474bc4e-a0d7-4e07-bfea-95759a51fe42)
+[circuit_diagram ](https://github.com/user-attachments/assets/4474bc4e-a0d7-4e07-bfea-95759a51fe42)
 
